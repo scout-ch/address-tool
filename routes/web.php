@@ -20,3 +20,10 @@ Route::get('login/hitobito', 'Auth\LoginController@redirectToHitobitoOAuth')->na
 Route::get('login/hitobito/callback', 'Auth\LoginController@handleHitobitoOAuthCallback')->name('login.hitobito.callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/mail', 'MailController@index')->name('mail');
+Route::any('/mail/send', 'MailController@send')->name('mail-send');
+
+Route::get('/upload', 'UploadController@index')->name('upload');
+
+Route::post('/upload_receiver', 'UploadController@receive')->name('receive');
