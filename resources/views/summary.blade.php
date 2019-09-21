@@ -12,7 +12,7 @@
       if($groups[$i]['found'] == "true")
       {
         $csvStr .= "<h4>".$groups[$i]['email']."</h4>";
-        $csvStr .= "<p><a href='".$groups[$i]['persons']."'>".$groups[$i]['persons']."</a></p>";
+        $csvStr .= "<p>".$groups[$i]['persons']."</p>";
       }
       else {
         $csvStr .= "<i>".$groups[$i]['error']."</i>";

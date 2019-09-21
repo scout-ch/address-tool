@@ -29,7 +29,9 @@ if (!function_exists('query_groups')) {
       {
         if($person[1] == $groups[$i]['id'])
         {
-          $filtered_persons .= $person_url_base.$person[0];
+          $person_url = $person_url_base.$person[0];
+
+          $filtered_persons .= "<a href='".$person_url."'>".$person_url."</a>";
           $filtered_persons .= "<br/>";
         }
       }
