@@ -32,7 +32,13 @@ class UploadController extends Controller
 
     $file = $_FILES["fileToUpload"]["tmp_name"];
     $persons = read_file($file);
-    $groups = query_groups($persons);
+
+    try {
+      $groups = query_groups($persons);
+    } catch(\Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+      return;
+    }
     return view('summary', ['groups' => $groups]);
   }
 

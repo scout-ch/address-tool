@@ -36,7 +36,17 @@ if (!function_exists('query_groups')) {
       $groups[$i]['persons'] = $filtered_persons;
     }
 
+    if (curl_errno($channel))
+    {
+      $error_msg = curl_error($channel);
+    }
+
     curl_close($channel);
+
+    if (isset($error_msg))
+    {
+      throw new Exception("Curl Fehler: ".$error_msg);
+    }
 
     return $groups;
   }
