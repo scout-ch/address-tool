@@ -11,6 +11,13 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        <a
+                    class="btn btn-hitobito form-control{{ $errors->has('hitobito') ? ' is-invalid' : '' }}"
+                    style="width: 100%"
+                    href="{{ route('login.hitobito') }}">
+                    {{ __('Via PBS MiData registrieren') }}
+                </a>
+
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 

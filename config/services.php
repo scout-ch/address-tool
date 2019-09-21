@@ -20,6 +20,14 @@ return [
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.eu.mailgun.net'),
     ],
 
+    'hitobito' => [
+        'base_url' => env('HITOBITO_BASE_URL', 'http://192.168.2.105:3000'),
+        'client_id' => env('HITOBITO_CLIENT_UID'),
+        'client_secret' => env('HITOBITO_CLIENT_SECRET'),
+        #'redirect' => env('HITOBITO_CALLBACK_URI', 'urn:ietf:wg:oauth:2.0:oob'),
+        'redirect' => env('HITOBITO_CALLBACK_URI', 'http://192.168.2.105/login/hitobito/callback'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
