@@ -29,14 +29,26 @@ if (!function_exists('query_groups')) {
       {
         if($person[1] == $groups[$i]['id'])
         {
-          $filtered_persons .= $person_url_base.$person[0];
+          $person_url = $person_url_base.$person[0];
+
+          $filtered_persons .= "<a href='".$person_url."'>".$person_url."</a>";
           $filtered_persons .= "<br/>";
         }
       }
       $groups[$i]['persons'] = $filtered_persons;
     }
 
+    if (curl_errno($channel))
+    {
+      $error_msg = curl_error($channel);
+    }
+
     curl_close($channel);
+
+    if (isset($error_msg))
+    {
+      throw new Exception("Curl Fehler: ".$error_msg);
+    }
 
     return $groups;
   }
