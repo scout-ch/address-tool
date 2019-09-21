@@ -1,6 +1,22 @@
-<form method="post" action="/mail/send">
-    @csrf
+@extends('layouts.app')
 
-    <input type="email"  name="email" placeholder="Mail-Adresse" />
-    <input type="submit" />
-</form>
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Dashboard</div>
+
+                    <div class="card-body">
+                        <form method="post" action="/mail/send">
+                            @csrf
+
+                            <input type="email"  name="email" placeholder="Mail-Adresse" />
+                            <input type="submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
