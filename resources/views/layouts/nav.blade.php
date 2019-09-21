@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         @if(!Auth::guest())
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('home/')}}" href="{{ url('/home') }}">
                         Home
