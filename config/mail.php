@@ -18,6 +18,21 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
+	/*
+    |--------------------------------------------------------------------------
+    | Mailgun API
+    |--------------------------------------------------------------------------
+    |
+    | Here you may provide the API-information of the Mailgun-Service server used by your
+    | applications.
+    |
+    */
+	'mailgun' => [
+		'domain' => env('MAILGUN_DOMAIN', 'your-mailgun-domain'),
+		'secret' => env('MAILGUN_API_KEY', 'your-mailgun-key'),
+		'endpoint' => env('MAILGUN_ENDPOINT', 'api.eu.mailgun.net'),
+	],
+
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
