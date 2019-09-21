@@ -38,6 +38,10 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/Helpers/hitobito_api_helper.php",
+            "app/Helpers/csv_helper.php"
         ]
     },
     "autoload-dev": {
