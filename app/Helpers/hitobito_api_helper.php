@@ -5,8 +5,7 @@
 * @return an array of groups, including the links to all persons matched to that group
 */
 if (!function_exists('query_groups')) {
-  function query_groups($persons)
-  {
+  function query_groups($persons){
     $person_url_base = Config::get('urls.person_url');
     $channel = curl_init();
     $groups = get_unique_groups($persons);

@@ -5,28 +5,22 @@
   <div class="row justify-content-center">
    <div class="col-md-8">
     <div class="card">
-     <div class="card-header">Dashboard</div>
+     <div class="card-header">Kontakt gefunden</div>
 
      <div class="card-body">
-     <?php
-      $csvStr = "";
+      @foreach($found as  $entry)
+        {{ $entry }}
+       @endforeach
+     </div>
+    </div>
 
-      for ($i = 0; $i < count($groups); $i++)
-      {
-      if($groups[$i]['found'] == "true")
-      {
-      $csvStr .= "<h4>".$groups[$i]['email']."</h4>";
-      $csvStr .= "<p><a href='".$groups[$i]['persons']."'>".$groups[$i]['persons']."</a></p>";
-      }
-      else {
-      $csvStr .= "<i>".$groups[$i]['error']."</i>";
-      }
-      }
+    <div class="card">
+     <div class="card-header">Kontakt <b>nicht</b> gefunden</div>
 
-      echo $csvStr;
-      //TODO
-      // Mailgun API
-      ?>
+     <div class="card-body">
+      @foreach($not_found as  $entry)
+       <i>{{ $entry }}</i> <br />
+      @endforeach
      </div>
     </div>
    </div>

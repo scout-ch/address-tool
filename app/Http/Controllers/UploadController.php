@@ -23,8 +23,7 @@ class UploadController extends Controller
   {
     $this->add("öffne Datei");
 
-    if(!isset($_FILES["fileToUpload"]["tmp_name"]))
-    {
+    if(!isset($_FILES["fileToUpload"]["tmp_name"])){
       $this->add("Datei konnte nicht gelesen werden");
       printf($this->log[1]);
       return;
@@ -33,11 +32,23 @@ class UploadController extends Controller
     $file = $_FILES["fileToUpload"]["tmp_name"];
     $persons = read_file($file);
     $groups = query_groups($persons);
-    return view('summary', ['groups' => $groups]);
+
+    $found = [];
+    $not_found = [];
+
+    for ($i = 0; $i < count($groups); $i++){
+      if($groups[$i]['found'] == "true"){
+        $found .= $groups[$i]['email'];
+        $found .= $groups[$i]['persons'];
+      }else {
+        array_push( $not_found, $groups[$i]['error']);
+      }
+    }
+
+    return view('summary', ['found' => $found, 'not_found' => $not_found]);
   }
 
-  public function add($string)
-  {
+  public function add($string){
     array_push($this->log, $string);
   }
 }

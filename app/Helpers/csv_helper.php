@@ -4,8 +4,7 @@
 * Read a csv file containing two rows personId and groupId
 */
 if (!function_exists('read_file')) {
-    function read_file($file)
-    {
+    function read_file($file){
       $persons = array();
       $delimiter = detect_delimiter($file);
 
@@ -25,8 +24,7 @@ if (!function_exists('read_file')) {
 * This can be used to detect such cases
 */
 if (!function_exists('detect_delimiter')) {
-  function detect_delimiter($csvFile)
-  {
+  function detect_delimiter($csvFile){
     $delimiters = array(
         ';' => 0,
         ',' => 0,
