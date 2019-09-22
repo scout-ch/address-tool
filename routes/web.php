@@ -25,4 +25,4 @@ Route::get('/mail', 'MailController@index')->name('mailer');
 Route::any('/mail/send', 'MailController@send')->name('mailer-send');
 
 Route::get('/upload', 'UploadController@index')->name('upload');
-Route::post('/upload_receiver', 'UploadController@receive')->name('receive');
+Route::any('/upload_receiver', 'UploadController@receive')->name('receive');
