@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class TestMail extends Mailable
+class AddressMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,8 +26,8 @@ class TestMail extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build($from_mail)
     {
-        return $this->from('demo@vento.beer')->view('template.mail');
+        return $this->from($from_mail)->view('template.mail');
     }
 }

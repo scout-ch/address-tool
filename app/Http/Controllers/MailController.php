@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\TestMail;
+use App\Mail\AddressMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller{
@@ -14,7 +15,7 @@ class MailController extends Controller{
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+		// $this->middleware('auth');
 	}
 
 	/**
@@ -24,6 +25,8 @@ class MailController extends Controller{
 	 */
 	public function index()
 	{
+		print_r(Auth::user()->name);
+
 		return view('mail');
 	}
 
@@ -36,9 +39,9 @@ class MailController extends Controller{
 	{
 		foreach($request->input('mail') as $mail){
 			if(env('FAKER_MAIL')){
-				Mail::to(env('FAKER_MAIL'))->send(new TestMail());
+				Mail::to(env('FAKER_MAIL'))->send(new AddressMail());
 			}else{
-				Mail::to($mail)->send(new TestMail());
+				Mail::to($mail)->send(new AddressMail(Auth::user()->email));
 			}
 		}
 
