@@ -36,7 +36,9 @@ class MailController extends Controller{
 	{
 		print_r($request->post());
 
-		Mail::to($request->input('email'))->send(new TestMail());
+		foreach($request->input('mail') as $mail){
+			Mail::to($mail)->send(new TestMail());
+		}
 
 		return redirect()->back();
 	}

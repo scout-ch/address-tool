@@ -21,8 +21,8 @@ Route::get('login/hitobito/callback', 'Auth\LoginController@handleHitobitoOAuthC
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/mail', 'MailController@index')->name('mail');
-Route::any('/mail/send', 'MailController@send')->name('mail-send');
+Route::get('/mail', 'MailController@index')->name('mailer');
+Route::any('/mail/send', 'MailController@send')->name('mailer-send');
 
 Route::get('/upload', 'UploadController@index')->name('upload');
 Route::post('/upload_receiver', 'UploadController@receive')->name('receive');

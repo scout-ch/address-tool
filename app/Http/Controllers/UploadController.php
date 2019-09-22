@@ -31,15 +31,20 @@ class UploadController extends Controller
 
     $file = $_FILES["fileToUpload"]["tmp_name"];
     $persons = read_file($file);
-    $groups = query_groups($persons);
+
+    try {
+      $groups = query_groups($persons);
+    } catch(\Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+      return;
+    }
 
     $found = [];
     $not_found = [];
 
     for ($i = 0; $i < count($groups); $i++){
       if($groups[$i]['found'] == "true"){
-        $found .= $groups[$i]['email'];
-        $found .= $groups[$i]['persons'];
+        array_push($found, array($groups[$i]['email'], $groups[$i]['persons']));
       }else {
         array_push( $not_found, $groups[$i]['error']);
       }
