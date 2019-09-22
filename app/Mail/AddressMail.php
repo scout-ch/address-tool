@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Auth;
 
 class AddressMail extends Mailable
 {
@@ -26,8 +27,8 @@ class AddressMail extends Mailable
      *
      * @return $this
      */
-    public function build($from_mail)
+    public function build()
     {
-        return $this->from($from_mail)->view('template.mail');
+        return $this->from(Auth::user()->email)->view('template.mail');
     }
 }

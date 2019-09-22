@@ -25,8 +25,6 @@ class MailController extends Controller{
 	 */
 	public function index()
 	{
-		print_r(Auth::user()->name);
-
 		return view('mail');
 	}
 
@@ -41,7 +39,7 @@ class MailController extends Controller{
 			if(env('FAKER_MAIL')){
 				Mail::to(env('FAKER_MAIL'))->send(new AddressMail());
 			}else{
-				Mail::to($mail)->send(new AddressMail(Auth::user()->email));
+				Mail::to($mail)->send(new AddressMail());
 			}
 		}
 
