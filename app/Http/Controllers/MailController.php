@@ -42,6 +42,6 @@ class MailController extends Controller{
 			}
 		}
 
-		return redirect()->back();
+		return redirect()->route('upload')->with('message', 'Mails wurden gesendet!');
 	}
 }
