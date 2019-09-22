@@ -24,9 +24,7 @@
                                         Hallo
                                         <br />
                                         Wir haben festgestellt, dass die Adressen der folgenden MiData-Mitglieder nicht mehr korrekt sind:
-                                        <br />
-                                        <br />
-                                        LULULU
+                                        {!! $wrong_user !!}
                                     </p>
                                     <br />
                                 </td>

@@ -12,14 +12,16 @@ class AddressMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $data;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->wrong_user = $data;
     }
 
     /**
@@ -29,6 +31,6 @@ class AddressMail extends Mailable
      */
     public function build()
     {
-        return $this->from(Auth::user()->email)->view('template.mail');
+        return $this->from(Auth::user()->email)->view('template.mail')->with(['wrong_user' => $this->wrong_user]);
     }
 }

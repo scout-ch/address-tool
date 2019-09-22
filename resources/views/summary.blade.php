@@ -29,7 +29,7 @@
              @csrf
 
              @foreach($found as $mailadress)
-                <input type="hidden" name="mail[]" value="{{ $mailadress[0] }}">
+                <input type="hidden" name="mail[]" value="{{ $mailadress[0].','.$mailadress[1] }}">
              @endforeach
 
              <input type="submit" value="Mail an gelistete Kontakte senden">

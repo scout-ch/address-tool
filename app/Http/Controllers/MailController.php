@@ -15,7 +15,7 @@ class MailController extends Controller{
 	 */
 	public function __construct()
 	{
-		// $this->middleware('auth');
+		$this->middleware('auth');
 	}
 
 	/**
@@ -35,11 +35,14 @@ class MailController extends Controller{
 	 */
 	public function send(Request $request)
 	{
+		print_r($request->input('mail'));
+
 		foreach($request->input('mail') as $mail){
+			$data = explode(',',$mail);
 			if(env('FAKER_MAIL')){
-				Mail::to(env('FAKER_MAIL'))->send(new AddressMail());
+				Mail::to(env('FAKER_MAIL'))->send(new AddressMail($data[1]));
 			}else{
-				Mail::to($mail)->send(new AddressMail());
+				Mail::to($data[0])->send(new AddressMail($data[1]));
 			}
 		}
 
