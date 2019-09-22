@@ -124,6 +124,8 @@ class LoginController extends Controller
             // Don't register a new user if another account already uses the same email address
             throw new InvalidLoginProviderException;
         }
+
+        if($socialiteUser)
         $created = HitobitoUser::create(['hitobito_id' => $socialiteUser->getId(), 'email' => $socialiteUser->getEmail(), 'name' => $socialiteUser->getNickname()]);
         return $created;
     }
