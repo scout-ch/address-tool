@@ -34,8 +34,6 @@ class MailController extends Controller{
 	 */
 	public function send(Request $request)
 	{
-		print_r($request->post());
-
 		foreach($request->input('mail') as $mail){
 			if(env('FAKER_MAIL')){
 				Mail::to(env('FAKER_MAIL'))->send(new TestMail());
