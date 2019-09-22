@@ -6,19 +6,22 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Auth;
 
-class TestMail extends Mailable
+class AddressMail extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $data;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->wrong_user = $data;
     }
 
     /**
@@ -28,6 +31,6 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->from('demo@vento.beer')->view('template.mail');
+        return $this->from(Auth::user()->email)->view('template.mail')->with(['wrong_user' => $this->wrong_user]);
     }
 }

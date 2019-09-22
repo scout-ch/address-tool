@@ -60,14 +60,6 @@
      </div>
     </div><br/><br/>
 
-     <!--<div class="card">
-      <div class="card-header" id="headingThree">
-       <h5 class="mb-0">
-         <button class="btn btn-primary" data-toggle="collapse" data-target="#mailing" aria-expanded="false" aria-controls="mailing">
-           Übersicht E-Mails
-         </button>
-       </h5>
-     </div>-->
      <div class="card">
       <div id="mailing" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
        <div class="card-body">
@@ -76,7 +68,7 @@
            @csrf
 
            @foreach($found as $mailadress)
-              <input type="hidden" name="mail[]" value="{{ $mailadress[0] }}">
+              <input type="hidden" name="mail[]" value="{{ $mailadress[0].','.$mailadress[1] }}">
            @endforeach
 
            <input type="submit" class="btn btn-danger" value="Mail an gelistete Kontakte senden">
@@ -84,8 +76,6 @@
        </div>
       </div>
      </div>
-
-
 
   </div>
  </div>

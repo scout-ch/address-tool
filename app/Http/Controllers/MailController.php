@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\TestMail;
+use App\Mail\AddressMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller{
@@ -34,11 +35,14 @@ class MailController extends Controller{
 	 */
 	public function send(Request $request)
 	{
+		print_r($request->input('mail'));
+
 		foreach($request->input('mail') as $mail){
+			$data = explode(',',$mail);
 			if(env('FAKER_MAIL')){
-				Mail::to(env('FAKER_MAIL'))->send(new TestMail());
+				Mail::to(env('FAKER_MAIL'))->send(new AddressMail($data[1]));
 			}else{
-				Mail::to($mail)->send(new TestMail());
+				Mail::to($data[0])->send(new AddressMail($data[1]));
 			}
 		}
 

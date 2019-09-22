@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        <form method="post" action="/mail/send">
+                        <form method="post" action="{{ route('mailer-send') }}">
                             @csrf
 
                             <input type="email"  name="email" placeholder="Mail-Adresse" />
