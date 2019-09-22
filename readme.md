@@ -28,11 +28,6 @@ composer install
 cp .env.example .env
 ```
 
-Nur wenn etwas am JS oder SCSS geändert wurde:
-```
-yarn && yarn production
-```
-
 ```
 php artisan migrate
 ```
@@ -81,4 +76,9 @@ HITOBITO_BASE_URL='https://pbs.puzzle.ch'
 HITOBITO_CLIENT_UID=adnvlkndblknadfdlbnalkfdn
 HITOBITO_CLIENT_SECRET=vvkösdnblknafdlkbnalkfnlkanf
 HITOBITO_CALLBACK_URI='https://address.vento.beer/login/hitobito/callback'
+```
+
+Nur wenn etwas am JS oder SCSS geändert wurde:
+```
+yarn && yarn production
 ```
