@@ -30,7 +30,7 @@ if (!function_exists('query_groups')) {
         {
           $person_url = $person_url_base.$person[0];
 
-          $filtered_persons .= "<a href='".$person_url."'>".$person_url."</a>";
+          $filtered_persons .= "<a href='".$person_url."' target='_blank'>".$person_url."</a>";
           $filtered_persons .= "<br/>";
         }
       }

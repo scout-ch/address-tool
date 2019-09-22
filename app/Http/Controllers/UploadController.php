@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Config;
 use App\User;
 use App\Http\Controllers\Controller;
 
@@ -11,6 +12,7 @@ class UploadController extends Controller
 
   public function __construct()
   {
+    //Dev comment this out for testing without login
     $this->middleware('auth');
     $this->log = array();
   }
@@ -46,12 +48,13 @@ class UploadController extends Controller
     for ($i = 0; $i < count($groups); $i++){
       if($groups[$i]['found'] == "true"){
         array_push($found, array($groups[$i]['email'], $groups[$i]['persons']));
-      }else {
-        array_push( $not_found, $groups[$i]['error']);
+      } else {
+        array_push($not_found, array($groups[$i]['id'], $groups[$i]['error']));
       }
     }
 
-    return view('summary', ['found' => $found, 'not_found' => $not_found]);
+    $group_url = Config::get('urls.groups_url')['start'];
+    return view('summary', ['found' => $found, 'not_found' => $not_found, 'group_url' => $group_url]);
   }
 
   public function add($string){
