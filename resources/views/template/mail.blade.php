@@ -24,9 +24,16 @@
                                         Hallo
                                         <br />
                                         Wir haben festgestellt, dass die Adressen der folgenden MiData-Mitglieder nicht mehr korrekt sind:
+                                        <br />
                                         {!! $wrong_user !!}
+
                                     </p>
                                     <br />
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <p style="color: #adb5bd">Dieses Mail wurde  durch den Adress-Reporter der PBS generiert und versendet.</p>
                                 </td>
                             </tr>
                             </tbody>
