@@ -125,7 +125,6 @@ class LoginController extends Controller
             throw new InvalidLoginProviderException;
         }
 
-        if($socialiteUser)
         $created = HitobitoUser::create(['hitobito_id' => $socialiteUser->getId(), 'email' => $socialiteUser->getEmail(), 'name' => $socialiteUser->getNickname()]);
         return $created;
     }
