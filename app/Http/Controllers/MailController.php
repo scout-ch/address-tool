@@ -37,7 +37,11 @@ class MailController extends Controller{
 		print_r($request->post());
 
 		foreach($request->input('mail') as $mail){
-			Mail::to($mail)->send(new TestMail());
+			if(env('FAKER_MAIL')){
+				Mail::to(env('FAKER_MAIL'))->send(new TestMail());
+			}else{
+				Mail::to($mail)->send(new TestMail());
+			}
 		}
 
 		return redirect()->back();
