@@ -100,7 +100,14 @@ if (!function_exists('single_query')) {
       throw new Exception("Gruppe mit ID ".$group_id." nicht gefunden");
     }
 
-    $email = $output_json["groups"][0]["email"];
+
+    $email = null;
+    if(isset($output_json["groups"][0]["email"]) && $output_json["groups"][0]["email"] !== ""){
+        $email = $output_json["groups"][0]["email"];
+    }elseif(isset($output_json["linked"]["people"][0]["email"]) && $output_json["linked"]["people"][0]["email"] !== ""){
+        $email = $output_json["linked"]["people"][0]["email"];
+    }
+
     if(isNullOrEmptyString($email))
     {
       throw new Exception("Gruppe mit ID ".$group_id." hat keine E-Mail hinterlegt");
@@ -111,9 +118,16 @@ if (!function_exists('single_query')) {
 }
 
 if (!function_exists('isNullOrEmptyString')) {
-  function isNullOrEmptyString($str)
-  {
-    return (!isset($str) || trim($str) === '');
-  }
+    function isNullOrEmptyString($str)
+    {
+        return (!isset($str) || trim($str) === '');
+    }
+}
+
+if (!function_exists('notNullOrEmptyString')) {
+    function notNullOrEmptyString($str)
+    {
+        return (isset($str) || trim($str) !== '');
+    }
 }
 ?>
