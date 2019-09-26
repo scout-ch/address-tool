@@ -1,7 +1,7 @@
 # MiData Address-Reporter
 
 ### Pre-Requirements
-PHP mindestens in der Version 7.3.1 
+PHP mindestens in der Version 7.1.3 
 https://www.php.net/downloads.php
 
 composer
