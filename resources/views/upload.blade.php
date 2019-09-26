@@ -8,6 +8,17 @@
             </div>
         @endif
 
+
+        @if(null === env('FAKER_MAIL'))
+            <div class="alert alert-success">
+                Das System läuft momentan im Produktiv-Modus. Alle Mails werden an die ermittelten Empfänger gesendet!
+            </div>
+        @else
+            <div class="alert alert-danger">
+                Das System läuft momentan im Test-Modus. Alle Mails werden an {{env('FAKER_MAIL')}} gesendet!
+            </div>
+        @endif
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
