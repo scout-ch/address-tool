@@ -10,6 +10,11 @@ if (!function_exists('query_groups')) {
     $channel = curl_init();
     $groups = get_unique_groups($persons);
 
+    $max_group_count = Config::get('app.max_group_count');
+    if(count($groups) > $max_group_count) {
+      throw new Exception("Zu viele Elemente, Maximum: ".$max_group_count." Gruppen");
+    }
+
     // Query the hitobito API
     for ($i = 0; $i < count($groups); $i++) {
       try {
