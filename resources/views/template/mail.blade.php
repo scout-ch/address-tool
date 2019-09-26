@@ -6,7 +6,7 @@
                 <tbody>
                 <tr>
                     <td valign="top" align="left" width="200"><h1>MiData Adress-Audit</h1></td>
-                    <td valign="top" align="rigth" width="200"><img src="{{file_get_contents(resource_path('images/midata.svg'))}}" alt=""></td>
+                    <td valign="top" align="rigth" width="150"><img src="data:image/png;base64,{{base64_encode(file_get_contents(resource_path('images/logo.png')))}}" alt="Logo Pfadibewegung Schweiz"></td>
                 </tr>
                 </tbody>
             </table>

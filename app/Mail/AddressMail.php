@@ -31,6 +31,6 @@ class AddressMail extends Mailable
      */
     public function build()
     {
-        return $this->from(Auth::user()->email)->view('template.mail')->with(['wrong_user' => $this->wrong_user]);
+        return $this->from(env('MAIL_USERNAME'))->replyTo(Auth::user()->email)->view('template.mail')->with(['wrong_user' => $this->wrong_user]);
     }
 }
