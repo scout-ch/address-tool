@@ -3,7 +3,7 @@
 @section('content')
  <div class="container">
   <div class="row justify-content-center">
-   <div class="col-md-8">
+   <div class="col-md">
 
     <h2>Übersicht über deinen Versand</h2><br/>
     <div id="accordion">

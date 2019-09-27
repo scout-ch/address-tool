@@ -42,5 +42,3 @@ if (!function_exists('detect_delimiter')) {
     return array_search(max($delimiters), $delimiters);
   }
 }
-
-?>

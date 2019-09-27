@@ -9,6 +9,7 @@ use App\Models\User;
 use Exception;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\AbstractUser as SocialiteUser;
 use Laravel\Socialite\Facades\Socialite;
@@ -49,7 +50,7 @@ class LoginController extends Controller
     /**
      * Redirect the user to the hitobito authentication page.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function redirectToHitobitoOAuth()
     {
@@ -64,7 +65,7 @@ class LoginController extends Controller
      *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws Exception
      */
     public function handleHitobitoOAuthCallback(Request $request)
     {
