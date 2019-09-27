@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Config;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UploadController extends Controller
 {
@@ -53,8 +54,19 @@ class UploadController extends Controller
       }
     }
 
+    try{
+      $user_mail = Auth::user()->email;
+    }
+    catch (\Exception $e){
+      $user_mail = "";
+    }
+
     $group_url = Config::get('urls.groups_url')['start'];
-    return view('summary', ['found' => $found, 'not_found' => $not_found, 'group_url' => $group_url]);
+    return view('summary',
+    ['found' => $found,
+     'not_found' => $not_found,
+     'group_url' => $group_url,
+     'user_mail' => $user_mail]);
   }
 
   public function add($string){

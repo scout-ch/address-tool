@@ -72,7 +72,7 @@
            @endforeach
 
            <span>E-Mail-Adresse für Rückfragen</span><br />
-           <input type="email" name="contact"><br /><br />
+           <input type="email" name="contact" value="{{ $user_mail }}" required><br /><br />
            <input type="submit" class="btn btn-danger" value="Mail an gelistete Kontakte senden">
         </form>
        </div>
