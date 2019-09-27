@@ -35,14 +35,14 @@ class MailController extends Controller{
 	 */
 	public function send(Request $request)
 	{
-		print_r($request->input('mail'));
+		$contact = $request->input('contact');
 
 		foreach($request->input('mail') as $mail){
 			$data = explode(',',$mail);
 			if(env('FAKER_MAIL')){
-				Mail::to(env('FAKER_MAIL'))->send(new AddressMail($data[1]));
+				Mail::to(env('FAKER_MAIL'))->send(new AddressMail($data[1], $contact));
 			}else{
-				Mail::to($data[0])->send(new AddressMail($data[1]));
+				Mail::to($data[0])->send(new AddressMail($data[1], $contact));
 			}
 		}
 

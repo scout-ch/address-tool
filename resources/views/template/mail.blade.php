@@ -1,3 +1,4 @@
+<html>
 <table width="100%">
     <tbody>
     <tr>
@@ -21,19 +22,37 @@
                             <tr>
                                 <td>
                                     <p style="padding-left: 5px;">
-                                        Hallo
-                                        <br />
-                                        Wir haben festgestellt, dass die Adressen der folgenden MiData-Mitglieder nicht mehr korrekt sind:
-                                        <br />
+                                        Wir haben festgestellt, dass die Adressen der folgenden Mitglieder nicht mehr korrekt sind.
+                                        Bitte nimm dir doch die Zeit, um die Angaben in der MiData zu korrigieren.
+                                        <br /><br />
+                                        ----------
+                                        <br /><br />
+                                        Nous avons remarqué que les adresses des membres suivants ne sont plus correctes.
+                                        Veuillez corriger les informations dans la MiData dès que possible.
+                                        <br /><br />
+                                        ----------
+                                        <br /><br />
                                         {!! $wrong_user !!}
-
+                                        <br /><br />
                                     </p>
                                     <br />
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <p style="color: #adb5bd">Dieses Mail wurde  durch den Adress-Reporter der PBS generiert und versendet.</p>
+                                    <p style="color: #adb5bd">
+                                      <b>Wer hat diese E-Mail ausgelöst?</b><br/>
+                                      Bei einem Postversand eines Kantonalverbandes oder der PBS (Sarasani) gibt es regelmässig Retouren, die eingehen.
+                                      Damit die Unterlagen beim nächsten Versand nicht wieder ins Leere gehen, werden falsche Adressen den Abteilungen gemeldet.
+                                      <br /><br />
+                                      Kontaktperson für diese Meldung:
+                                      {{ $contact }}
+                                      <br /><br />
+                                      ----------
+                                      <br /><br />
+                                      <b>D'où vient cet e-mail?</b><br/>
+                                      Si une association cantonale ou le MSdS (Sarasani) envoient des document par la poste, il y a des retours. Afin d'éviter que les documents ne soient de nouveau
+                                      perdus la prochaine fois qu'ils sont envoyés, les adresses erronées sont signalées aux groups.
+                                      <br /><br />
+                                      Contact pour ce message:
+                                      {{ $contact }}
+                                    </p>
                                 </td>
                             </tr>
                             </tbody>
@@ -46,3 +65,4 @@
     </tr>
     </tbody>
 </table>
+</html>
