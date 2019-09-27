@@ -128,11 +128,3 @@ if (!function_exists('isNullOrEmptyString')) {
         return (!isset($str) || trim($str) === '');
     }
 }
-
-if (!function_exists('notNullOrEmptyString')) {
-    function notNullOrEmptyString($str)
-    {
-        return (isset($str) || trim($str) !== '');
-    }
-}
-?>
