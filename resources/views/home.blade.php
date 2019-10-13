@@ -14,7 +14,9 @@
             </div>
           @endif
 
-          <p>Schön, dass du da bist!</p>
+          <br />
+          <p>Schön, dass du da bist! Hier kannst du herausfinden, wie du falsche Adressen den zuständigen Abteilungen melden kannst.</p>
+          <br />
 
           <div class="accordion" id="accordionExample">
 
@@ -22,7 +24,7 @@
               <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    Was macht das Adress-Tool?
+                    Wofür kann ich das Adress-Tool verwenden?
                   </button>
                 </h2>
               </div>
@@ -64,7 +66,7 @@
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Wie komme ich zu dieser CSV-Datei?
+                    Wie erstelle ich eine passende CSV-Datei?
                   </button>
                 </h2>
               </div>
