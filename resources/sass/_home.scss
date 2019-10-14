@@ -1,0 +1,26 @@
+.card .btn-faq {
+  color:#fefefe;
+  background-color:#99bf62;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.card .btn-faq:hover {
+  color:#ffffff;
+  background-color:#88ae51;
+}
+
+img.max_300 {
+  max-width: 300px;
+}
+
+@media only screen and (max-width: 420px) {
+  img.max_300 {
+    max-width: 100%;
+  }
+
+  .card .card-body {
+    padding:0.7rem;
+  }
+}

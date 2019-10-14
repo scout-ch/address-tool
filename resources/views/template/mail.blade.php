@@ -28,10 +28,11 @@
                                         ----------
                                         <br /><br />
                                         Nous avons remarqué que les adresses des membres suivants ne sont plus correctes.
-                                        Veuillez corriger les informations dans la MiData dès que possible.
+                                        Nous vous prions de bien vouloir corriger les données dans la MiData au plus vite possible.
                                         <br /><br />
                                         ----------
                                         <br /><br />
+                                        <h3>Gemeldete Personen / Personnes signalées:<h3/><br />
                                         {!! $wrong_user !!}
                                         <br /><br />
                                     </p>
@@ -47,7 +48,7 @@
                                       ----------
                                       <br /><br />
                                       <b>D'où vient cet e-mail?</b><br/>
-                                      Si une association cantonale ou le MSdS (Sarasani) envoient des document par la poste, il y a des retours. Afin d'éviter que les documents ne soient de nouveau
+                                      Lorsqu'une association cantonale ou le MSdS (Sarasani) envoie des document par poste, il y a régulièrement des retours. Afin d'éviter que les documents ne soient de nouveau
                                       perdus la prochaine fois qu'ils sont envoyés, les adresses erronées sont signalées aux groups.
                                       <br /><br />
                                       Contact pour ce message:
