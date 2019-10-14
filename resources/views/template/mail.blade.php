@@ -32,7 +32,7 @@
                                         <br /><br />
                                         ----------
                                         <br /><br />
-                                        <h3>Gemeldete Personen / Personnes signalées:<h3/><br />
+                                        <h3>Gemeldete Personen / Personnes signalées:</h3>
                                         {!! $wrong_user !!}
                                         <br /><br />
                                     </p>
