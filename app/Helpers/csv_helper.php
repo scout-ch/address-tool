@@ -11,11 +11,16 @@ if (!function_exists('read_file')) {
       // Create array from file contents (personID, groupID)
       $fp = fopen($file, 'rb');
       while(!feof($fp)) {
-          $persons[] = fgetcsv($fp, null, $delimiter);
+          $line = fgetcsv($fp, null, $delimiter);
+
+          //Only include lines with two columns
+          if(isset($line[0]) > 0 && isset($line[1]) > 0)
+          {
+            $persons[] = $line;
+          }
       }
 
-      // Remove last entry (end of file)
-      return array_slice($persons, 0, -1);
+      return $persons;
     }
 }
 
