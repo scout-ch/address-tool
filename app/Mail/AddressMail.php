@@ -33,6 +33,10 @@ class AddressMail extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_USERNAME'))->replyTo(env('MAIL_USERNAME'))->view('template.mail')->with(['wrong_user' => $this->wrong_user, 'contact' => $this->contact]);
+        return $this->from(env('MAIL_USERNAME'))
+        ->replyTo(env('MAIL_USERNAME'))
+        ->view('template.mail')
+        ->subject('MiData Adress-Audit')
+        ->with(['wrong_user' => $this->wrong_user, 'contact' => $this->contact]);
     }
 }
