@@ -1,5 +1,4 @@
 phraseapp:
-  #access_token:
   project_id: 3812c4a1646fde3de22c5dbb3ec201c2
   push:
     sources:
