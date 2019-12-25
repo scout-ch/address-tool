@@ -106,6 +106,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | List of locales supported by the application
+    |--------------------------------------------------------------------------
+    |
+    | The locale of each request will be set to one of these locales,
+    | depending on the settings from the session and the request.
+    |
+    */
+    'supported_locales' => [
+        'de',
+        'fr',
+        'it',
+        'en',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Faker Locale
     |--------------------------------------------------------------------------
     |
@@ -115,7 +131,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'ch_DE',
 
     /*
     |--------------------------------------------------------------------------

@@ -10,3 +10,7 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.dropdown-menu {
+    min-width: unset;
+}

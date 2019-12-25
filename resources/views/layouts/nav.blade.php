@@ -14,7 +14,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('home/')}}" href="{{ url('/home') }}">
-                        Home
+                        {{ __('nav.home') }}
                     </a>
                 </li>
             </ul>
@@ -22,7 +22,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('upload/')}}" href="{{ url('/upload') }}">
-                        Daten hochladen
+                        {{ __('nav.upload_file') }}
                     </a>
                 </li>
             </ul>
@@ -30,6 +30,18 @@
 
         <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown" title="{{__('t.header.language_switch')}}">
+                    <a class="nav-link dropdown-toggle" id="navbarLocaleSelect" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ App::getLocale() }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarLocaleSelect">
+                        @foreach(array_diff(Config::get('app.supported_locales'), [App::getLocale()]) as $l)
+                            <a class="dropdown-item"
+                               href="{{ route('locale.select', ['locale' => $l]) }}">{{ $l }}</a>
+                        @endforeach
+                    </div>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

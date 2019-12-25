@@ -24,3 +24,5 @@ Route::any('/mail/send', 'MailController@send')->name('mailer-send');
 
 Route::get('/upload', 'UploadController@index')->name('upload');
 Route::any('/upload_receiver', 'UploadController@receive')->name('receive');
+
+Route::get('locale/{locale}', 'LocalizationController@select')->name('locale.select');
