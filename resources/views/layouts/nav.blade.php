@@ -14,7 +14,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('home/')}}" href="{{ url('/home') }}">
-                        {{ __('nav.home') }}
+                        {{ __('content.nav.home') }}
                     </a>
                 </li>
             </ul>
@@ -22,7 +22,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('upload/')}}" href="{{ url('/upload') }}">
-                        {{ __('nav.upload_file') }}
+                        {{ __('content.nav.upload_file') }}
                     </a>
                 </li>
             </ul>
@@ -30,7 +30,7 @@
 
         <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown" title="{{__('t.header.language_switch')}}">
+                <li class="nav-item dropdown" title="{{__('content.nav.language_switch')}}">
                     <a class="nav-link dropdown-toggle" id="navbarLocaleSelect" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ App::getLocale() }}
