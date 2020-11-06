@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "scoutch/address-tool",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Send mail by validating midata entries.",
     "keywords": [
-        "framework",
-        "laravel"
+        "scoutch",
+        "scout",
+        "midata"
     ],
     "license": "MIT",
     "require": {
