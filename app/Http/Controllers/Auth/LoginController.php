@@ -60,6 +60,7 @@ class LoginController extends Controller
     /**
      * TODO: Code below: get the actual information that we need.
      */
+
     /**
      * Obtain the user information from hitobito.
      *
@@ -83,10 +84,12 @@ class LoginController extends Controller
             return $this->redirectWithError(__('Melde dich bitte wie üblich mit Benutzernamen und Passwort an.'));
         } catch (Exception $exception) {
             throw $exception;
+
             return $this->redirectWithError(__('Leider klappt es momentan gerade nicht. Versuche es später wieder, oder registriere unten einen klassischen Account.'));
         }
 
         $this->guard()->login($user);
+
         return $this->sendLoginResponse($request);
     }
 
@@ -116,6 +119,7 @@ class LoginController extends Controller
             $user->email = $hitobitoEmail;
             $user->save();
         }
+
         return $user;
     }
 
@@ -127,6 +131,7 @@ class LoginController extends Controller
         }
 
         $created = HitobitoUser::create(['hitobito_id' => $socialiteUser->getId(), 'email' => $socialiteUser->getEmail(), 'name' => $socialiteUser->getNickname()]);
+
         return $created;
     }
 }

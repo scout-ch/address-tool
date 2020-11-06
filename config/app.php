@@ -64,7 +64,6 @@ return [
     */
     'max_group_count' => env('MAX_GROUP_COUNT', 500),
 
-
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
