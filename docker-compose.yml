@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  addresstool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: address_tool
+    ports:
+    - '80:8080'
