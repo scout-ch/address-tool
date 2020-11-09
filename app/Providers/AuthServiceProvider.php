@@ -31,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     /**
-     * Add Hitobito support to Socialite
+     * Add Hitobito support to Socialite.
      */
     private function bootHitobitoSocialite()
     {
@@ -40,6 +40,7 @@ class AuthServiceProvider extends ServiceProvider
             'hitobito',
             function ($app) {
                 $config = config('services.hitobito');
+
                 return new HitobitoProvider(
                     $this->app['request'],
                     $config['base_url'],

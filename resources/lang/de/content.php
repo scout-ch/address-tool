@@ -4,6 +4,6 @@
         'nav' => [
             'home' => 'Home',
             'upload_file'  => 'Daten hochladen',
-            'language_switch' => 'Sprache wählen'
-        ]
+            'language_switch' => 'Sprache wählen',
+        ],
     ];

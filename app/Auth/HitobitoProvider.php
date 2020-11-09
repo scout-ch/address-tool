@@ -38,7 +38,7 @@ class HitobitoProvider extends AbstractProvider implements ProviderInterface
     public function __construct(Request $request, $baseUrl, $clientId, $clientSecret, $redirectUrl, $guzzle = [])
     {
         parent::__construct($request, $clientId, $clientSecret, $redirectUrl, $guzzle);
-        $this->baseUrl = $baseUrl . '/oauth';
+        $this->baseUrl = $baseUrl.'/oauth';
     }
 
     /**
@@ -46,7 +46,7 @@ class HitobitoProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase($this->baseUrl . '/authorize', $state);
+        return $this->buildAuthUrlFromBase($this->baseUrl.'/authorize', $state);
     }
 
     /**
@@ -54,7 +54,7 @@ class HitobitoProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenUrl()
     {
-        return $this->baseUrl . '/token';
+        return $this->baseUrl.'/token';
     }
 
     /**
@@ -73,12 +73,13 @@ class HitobitoProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get($this->baseUrl . '/profile', [
+        $response = $this->getHttpClient()->get($this->baseUrl.'/profile', [
             'headers' => [
-                'Authorization' => 'Bearer ' . $token,
-                'X-Scope' => $this->formatScopes($this->getScopes(), $this->scopeSeparator)
+                'Authorization' => 'Bearer '.$token,
+                'X-Scope' => $this->formatScopes($this->getScopes(), $this->scopeSeparator),
             ],
         ]);
+
         return json_decode($response->getBody(), true);
     }
 
