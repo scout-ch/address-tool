@@ -22,7 +22,7 @@
                             <tr>
                                 <td>
                                     <p style="padding-left: 5px;">
-                                        Wir haben festgestellt, dass die Adressen der folgenden Mitglieder nicht mehr korrekt sind.
+                                        Wir haben festgestellt, dass die Postadressen der folgenden Mitglieder nicht mehr korrekt sind.
                                         Bitte nimm dir doch die Zeit, um die Angaben in der MiData zu korrigieren.
                                         <br /><br />
                                         ----------
@@ -40,7 +40,7 @@
                                     <p style="color: #adb5bd">
                                       <b>Wer hat diese E-Mail ausgelöst?</b><br/>
                                       Bei einem Postversand eines Kantonalverbandes oder der PBS (Sarasani) gibt es regelmässig Retouren, die eingehen.
-                                      Damit die Unterlagen beim nächsten Versand nicht wieder ins Leere gehen, werden falsche Adressen den Abteilungen gemeldet.
+                                      Damit die Unterlagen beim nächsten Versand nicht wieder ins Leere gehen, werden falsche Postadressen den Abteilungen gemeldet.
                                       <br /><br />
                                       Kontaktperson für diese Meldung:
                                       {{ $contact }}
