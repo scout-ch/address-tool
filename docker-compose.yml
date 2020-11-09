@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  addresstool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: address_tool
+    volumes:
+    - "./source/:/var/www/"
+    ports:
+    - '80:80'
+    links:
+      - fpm
+
+  fpm:
+    image: php:7.4-fpm-alpine
+    volumes:
+    - "./source/:/var/www/"
