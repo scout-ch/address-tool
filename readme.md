@@ -4,7 +4,7 @@
 PHP mindestens in der Version 7.1.3 
 https://www.php.net/downloads.php
 
-composer
+composer v2
 https://getcomposer.org/
 
 Apache / Nginx
@@ -17,7 +17,7 @@ https://www.sqlite.org/download.html
 ### Setup-Guide
 
 ```
-git clone https://github.com/Vento-Nuenenen/address-tool
+git clone https://github.com/PBSMiData/address-tool
 ```
 
 ```
