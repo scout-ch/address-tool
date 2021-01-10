@@ -64,13 +64,12 @@ class UploadController extends Controller
 
         $group_url = Config::get('urls.groups_url')['start'];
 
-        return view(
-            'summary',
-            ['found' => $found,
-     'not_found' => $not_found,
-     'group_url' => $group_url,
-     'user_mail' => $user_mail, ]
-        );
+        return view('summary', [
+            'found' => $found,
+            'not_found' => $not_found,
+            'group_url' => $group_url,
+            'user_mail' => $user_mail,
+        ]);
     }
 
     public function add($string)
