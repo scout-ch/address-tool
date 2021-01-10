@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Tightenco\Parental\HasParent;
+use Parental\HasParent;
 
 /**
  * @property int $id
@@ -14,11 +14,6 @@ use Tightenco\Parental\HasParent;
  * @property string $image_url
  * @property string $login_provider
  * @property int $hitobito_id
- * @property Observation[] $observations
- * @property Course[] $courses
- * @property Course[] $nonArchivedCourses
- * @property Course[] $archivedCourses
- * @property Course $last_accessed_course
  */
 class HitobitoUser extends User
 {
