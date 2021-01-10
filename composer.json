@@ -15,7 +15,7 @@
         "laravel/passport": "^7.5",
         "laravel/socialite": "^4.4",
         "laravel/tinker": "^1.0",
-        "tightenco/parental": "^0.8.0"
+        "calebporzio/parental": "^0.11.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.3",

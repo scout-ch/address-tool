@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fcb3aa24f4384cdb967d115d2935716",
+    "content-hash": "88eb5e3ecf5be120300dfbd8f6e21d9b",
     "packages": [
+        {
+            "name": "calebporzio/parental",
+            "version": "v0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/parental.git",
+                "reference": "33344dae4069236ea65f525f605ccf08cac47729"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/parental/zipball/33344dae4069236ea65f525f605ccf08cac47729",
+                "reference": "33344dae4069236ea65f525f605ccf08cac47729",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.6.0|~5.7.0|~5.8.0|^6.0.0|^7.0.0|^8.0.0",
+                "illuminate/events": "~5.6.0|~5.7.0|~5.8.0|^6.0.0|^7.0.0|^8.0.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.6.0|~3.7.0|~3.8.0|^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Parental\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "A simple eloquent trait that allows relationships to be accessed through child models.",
+            "support": {
+                "issues": "https://github.com/calebporzio/parental/issues",
+                "source": "https://github.com/calebporzio/parental/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/calebporzio",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-09-08T20:04:29+00:00"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.2.1",
@@ -4871,51 +4922,6 @@
                 }
             ],
             "time": "2020-12-08T16:59:59+00:00"
-        },
-        {
-            "name": "tightenco/parental",
-            "version": "v0.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tightenco/parental.git",
-                "reference": "8c87252ddfa2f77b38418b92c5e8b1d0e15f7d94"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/parental/zipball/8c87252ddfa2f77b38418b92c5e8b1d0e15f7d94",
-                "reference": "8c87252ddfa2f77b38418b92c5e8b1d0e15f7d94",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "~5.6.0|~5.7.0|~5.8.0|~6.0.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "3.8.*",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tightenco\\Parental\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Caleb Porzio",
-                    "email": "calebporzio@gmail.com"
-                }
-            ],
-            "description": "A simple eloquent trait that allows relationships to be accessed through child models.",
-            "support": {
-                "issues": "https://github.com/tightenco/parental/issues",
-                "source": "https://github.com/tightenco/parental/tree/v0.8.0"
-            },
-            "abandoned": "calebporzio/parental",
-            "time": "2019-09-03T14:54:50+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
