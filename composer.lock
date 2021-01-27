@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cefbfc1654ce6e89e128d665b809295",
+    "content-hash": "603bd303ee18d585d308a39ce9d413c8",
     "packages": [
         {
             "name": "calebporzio/parental",
