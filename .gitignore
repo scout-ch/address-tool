@@ -1,7 +1,7 @@
 .php_cs.cache
 
-# Created by https://www.toptal.com/developers/gitignore/api/phpstorm+all,laravel,node,composer,macos,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=phpstorm+all,laravel,node,composer,macos,windows
+# Created by https://www.toptal.com/developers/gitignore/api/node,macos,laravel,windows,phpstorm+all,composer,yarn
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,macos,laravel,windows,phpstorm+all,composer,yarn
 
 ### Composer ###
 composer.phar
@@ -122,6 +122,9 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+
+# Optional stylelint cache
+.stylelintcache
 
 # Microbundle cache
 .rpt2_cache/
@@ -292,4 +295,20 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/phpstorm+all,laravel,node,composer,macos,windows
+### yarn ###
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+
+# and uncomment the following lines
+# .pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/node,macos,laravel,windows,phpstorm+all,composer,yarn
